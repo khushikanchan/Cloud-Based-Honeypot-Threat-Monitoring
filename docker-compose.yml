@@ -1,0 +1,31 @@
+services:
+
+  backend:
+    build: ./backend
+
+    container_name: honeypot-backend
+
+    ports:
+      - "5000:5000"
+      - "8080:8080"
+      - "2222:2222"
+      - "2121:2121"
+
+    volumes:
+      - ./backend:/app
+
+    restart: unless-stopped
+
+
+  frontend:
+    build: ./frontend
+
+    container_name: honeypot-frontend
+
+    ports:
+      - "5173:5173"
+
+    depends_on:
+      - backend
+
+    restart: unless-stopped
