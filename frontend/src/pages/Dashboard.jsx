@@ -22,7 +22,7 @@ import {
 
 import "./Dashboard.css";
 
-const API_URL = "http://localhost:5000";
+const API_URL = " https://cloud-based-honeypot-threat-monitoring.onrender.com";
 
 function StatCard({ title, value, subtitle, icon: Icon }) {
   return (

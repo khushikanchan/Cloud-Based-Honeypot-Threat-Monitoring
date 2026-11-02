@@ -6,7 +6,7 @@ import {
   RefreshCw,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000";
+const API_URL = " https://cloud-based-honeypot-threat-monitoring.onrender.com";
 
 function RiskBadge({ severity }) {
   const value = severity || "LOW";
